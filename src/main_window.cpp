@@ -65,3 +65,4 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 }  // namespace imageView_example
 
+

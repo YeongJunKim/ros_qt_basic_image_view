@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package>
-  <name>imageView_example</name>
+  <name>qt_basic_image_view</name>
   <version>0.1.0</version>
   <description>
 
-     imageView_example
+     qt_basic_image_view
 
   </description>
   <maintainer email="kdh@gmail.com">kdh</maintainer>

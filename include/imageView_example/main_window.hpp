@@ -43,6 +43,7 @@ public:
 
 public Q_SLOTS:
         void updateImg();
+
 private:
 	Ui::MainWindowDesign ui;
 	QNode qnode;

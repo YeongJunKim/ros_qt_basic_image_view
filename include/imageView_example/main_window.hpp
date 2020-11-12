@@ -44,6 +44,9 @@ public:
 public Q_SLOTS:
         void updateImg();
 
+//private slots:
+        void on_button_update_clicked();
+
 private:
 	Ui::MainWindowDesign ui;
 	QNode qnode;

@@ -63,6 +63,29 @@ void MainWindow::closeEvent(QCloseEvent *event)
 	QMainWindow::closeEvent(event);
 }
 
+void MainWindow::on_button_update_clicked()
+{
+  ROS_INFO("ON_BUTTON_UPDATE_CLICKED");
+  ros::master::V_TopicInfo topic_infos;
+  ros::master::getTopics(topic_infos);
+
+  QStringListModel *model = new QStringListModel();
+  QStringList list;
+
+  for (unsigned long i = 0; i < topic_infos.size(); i++) {
+    string a = topic_infos.at(i).name;
+    QString qstr = QString::fromStdString(a);
+    a = topic_infos.at(i).datatype;
+    std::cout<<a<<std::endl;
+    list << qstr;
+  }
+  model->setStringList(list);
+  ui.listView_topic_list->setModel(model);
+//  ui.listView_topic_list.setModel(model);
+}
+
+
 }  // namespace imageView_example
+
 
 
